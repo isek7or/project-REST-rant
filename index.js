@@ -9,12 +9,10 @@ app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
     res.render('home')
-    // res.send('Hello world!')
 })
 
 app.get('*', (req, res) => {
     res.render('error404')
-    // res.status(404).send('<h1>404 Page</h1>')
 })
 
 app.listen(process.env.PORT)
